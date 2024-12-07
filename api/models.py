@@ -18,3 +18,6 @@ class CurrencyExchangeRate(models.Model):
 
     def __str__(self):
         return f"{self.base_currency}/{self.quote_currency} - {self.exchange_rate} on {self.date}"
+
+    def currency_pair(self):
+        return f"{self.base_currency.code}{self.quote_currency.code}"

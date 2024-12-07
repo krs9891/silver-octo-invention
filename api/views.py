@@ -15,7 +15,7 @@ class CurrencyExchangeView(APIView):
 
             if rate:
                 return Response({
-                    "currency_pair": f"{base.code}{quote.code}",
+                    "currency_pair": rate.currency_pair(),
                     "exchange_rate": round(rate.exchange_rate, 3)
                 })
             else:
