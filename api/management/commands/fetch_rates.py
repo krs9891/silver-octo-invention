@@ -6,7 +6,7 @@ class Command(BaseCommand):
     help = "Fetch initial currency data"
 
     def handle(self, *args, **kwargs):
-        pairs = ["EURUSD=X", "USDJPY=X", "PLNUSD=X"]
+        pairs = ["EURUSD=X", "USDJPY=X", "PLNUSD=X", "PLNEUR=X", "PLNCHF=X", "PLNGBP=X", "EURGBP=X"]
 
         for pair in pairs:
             ticker = yf.Ticker(pair)
